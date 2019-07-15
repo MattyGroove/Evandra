@@ -1,0 +1,22 @@
+IF
+	Global("rh#EvaTalks","GLOBAL",7)
+	Global("rh#EvaMessengerSpawn","GLOBAL",1)
+	InParty("rh#Eva")
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!StateCheck("rh#Eva",CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+	MoveToObject("rh#Eva")
+	Dialogue("rh#Eva")
+END
+
+IF
+	Global("rh#EvaMessengerSpawn","GLOBAL",2)
+	Global("rh#EvaMessengerGoAway","LOCALS",0)
+	InParty("rh#Eva")
+THEN
+RESPONSE #100
+	SetGlobal("rh#EvaMessengerGoAway","LOCALS",1)
+	EscapeAreaDestroy(5)
+END

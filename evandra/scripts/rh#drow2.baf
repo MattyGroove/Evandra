@@ -1,0 +1,97 @@
+IF
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",2)
+	StateCheck(Player2,STATE_DEAD)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",7)
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		JumpToPoint([1398.751])
+		MoveViewPoint([1398.751],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		StartDialogueNoSet([PC])
+		EndCutSceneMode()
+END
+IF
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",3)
+	StateCheck(Player3,STATE_DEAD)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",7)
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		JumpToPoint([1398.751])
+		MoveViewPoint([1398.751],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		StartDialogueNoSet([PC])
+		EndCutSceneMode()
+END
+IF
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",4)
+	StateCheck(Player4,STATE_DEAD)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",7)
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		JumpToPoint([1398.751])
+		MoveViewPoint([1398.751],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		StartDialogueNoSet([PC])
+		EndCutSceneMode()
+END
+
+IF
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",5)
+	StateCheck(Player5,STATE_DEAD)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",7)
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		JumpToPoint([1398.751])
+		MoveViewPoint([1398.751],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		StartDialogueNoSet([PC])
+		EndCutSceneMode()
+END
+
+IF
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",6)
+	StateCheck(Player6,STATE_DEAD)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",7)
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		JumpToPoint([1398.751])
+		MoveViewPoint([1398.751],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		StartDialogueNoSet([PC])
+		EndCutSceneMode()
+END

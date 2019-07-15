@@ -1,0 +1,48 @@
+IF
+Global("rh#EvandraExists","AR0411",0)
+Global("ControlPanel","AR0411",0)
+GlobalLT("chapter","GLOBAL",%bg2_chapter_4%)
+THEN
+RESPONSE #100
+SetGlobal("rh#EvandraExists","AR0411",1)
+CreateCreature("rh#eva",[2792.2267],4)
+Continue()
+END
+
+IF
+Global("rh#EvaPostLavok","GLOBAL",3)
+InParty("rh#Eva")
+!StateCheck("rh#Eva",CD_STATE_NOTVALID)
+!Global("PCSphere","GLOBAL",1)
+Global("rh#MoveKnights","AR0411",1)
+THEN
+RESPONSE #100
+SetGlobal("rh#MoveKnights","AR0411",2)
+ActionOverride("OBSSOL01",JumpToPoint([2995.2692]))
+ActionOverride("OBSSOL02",JumpToPoint([2911.2735]))
+ActionOverride("OBSSOL03",JumpToPoint([2911.2606]))
+Continue()
+END
+
+IF
+!Global("PCSphere","GLOBAL",1)
+Dead("Lavok02")
+!InParty("rh#Eva")
+Global("rh#MoveEvandra","AR0411",0)
+THEN
+RESPONSE #100
+SetGlobal("rh#MoveEvandra","AR0411",1)
+ActionOverride("rh#Eva",DestroySelf())
+Continue()
+END
+
+IF
+Global("PCSphere","GLOBAL",1)
+!InParty("rh#Eva")
+Global("rh#MoveEvandra","AR0411",0)
+THEN
+RESPONSE #100
+SetGlobal("rh#MoveEvandra","AR0411",1)
+ActionOverride("rh#Eva",JumpToPoint([2944.2746]))
+Continue()
+END

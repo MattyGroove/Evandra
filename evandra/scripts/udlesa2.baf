@@ -1,0 +1,17 @@
+IF
+Global("rh#EvaTebrynIymril","GLOBAL",3)
+Global("rh#drowdeactivate","LOCALS",0)
+THEN
+  RESPONSE #100
+  Deactivate(Myself)
+  SetGlobal("rh#drowdeactivate","LOCALS",1)
+END
+
+IF
+GlobalGT("rh#EvaTebrynIymril","GLOBAL",3)
+Global("rh#drowdeactivate","LOCALS",1)
+THEN
+  RESPONSE #100
+  Activate(Myself)
+  SetGlobal("rh#drowdeactivate","LOCALS",2)
+END

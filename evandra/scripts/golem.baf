@@ -1,0 +1,9 @@
+IF
+	Range("rh#Eva",20)
+	Global("rh#EvaGolemRoom","AR0411",0)
+    CombatCounter(0)
+THEN
+	RESPONSE #100
+		DisplayStringHead("rh#Eva",@0 /* Ah, so this is the room that Onvo always found so curious... and I can certainly see why. How fascinating this all is. */) 
+		SetGlobal("rh#EvaGolemRoom","AR0411",1)
+END

@@ -1,0 +1,11 @@
+IF
+Global("rh#PhilomenaExists","AR2100",0)
+InParty("rh#Eva")
+!StateCheck("rh#Eva",CD_STATE_NOTVALID)
+Global("PermissionToOpenDoor","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("rh#PhilomenaExists","AR2100",1)
+CreateCreature("rh#mena",[2432.1056],4)
+Continue()
+END

@@ -1,0 +1,19 @@
+IF
+    True()
+THEN
+  RESPONSE #100
+    CutSceneId("rh#Eva")
+    Wait(1)
+    MoveToPoint([1630.576])
+    Wait(2)
+    CreateVisualEffectObject("ICCSWOUI",Myself)
+    Wait(1)
+    ActionOverride("rh#sol01",ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride("rh#sol02",ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride("rh#sol03",ForceSpell(Myself,DRYAD_TELEPORT))
+    Wait(1)
+    SetGlobal("rh#EvaKnights","GLOBAL",7)
+    Wait(2)
+    EndCutSceneMode()
+    ActionOverride("rh#Eva",StartDialogueNoSet(Player1))
+END

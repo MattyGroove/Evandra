@@ -1,0 +1,13 @@
+IF
+	Range("rh#Eva",20)
+	Global("rh#EvaRunes","AR0411",0)
+    CombatCounter(0)
+THEN
+	RESPONSE #100
+		DisplayStringHead("rh#Eva",@1 /* Hm, in all of my years, I've never seen runes quite like this before... I wonder what language they're written in. */)
+		SetGlobal("rh#EvaRunes","AR0411",1)
+END
+
+
+
+

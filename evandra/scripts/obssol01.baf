@@ -1,0 +1,12 @@
+IF
+Global("rh#EvaPostLavok","GLOBAL",3)
+InParty("rh#Eva")
+Detect([PC])
+Detect("rh#Eva")
+!Global("PCSphere","GLOBAL",1)
+Global("rh#EvaReynaTalk","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("rh#EvaReynaTalk","GLOBAL",1)
+StartDialogueNoSet([PC])
+END

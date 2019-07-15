@@ -1,0 +1,9 @@
+IF
+  InPartyAllowDead("rh#Eva")
+  Dead("rh#Eva")
+  Global("rh#EvaPostLavok","GLOBAL",0)
+  Dead("Lavok02")
+THEN
+RESPONSE #100
+  SetGlobal("rh#EvaPostLavok","GLOBAL",4)
+END

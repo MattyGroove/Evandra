@@ -1,0 +1,124 @@
+IF
+Global("rh#DrowExist","AR2202",0)
+Global("rh#EvaPhilomenaTask","GLOBAL",4)
+THEN
+RESPONSE #100
+CreateCreature("rh#drow1",[1378.854],8)
+CreateCreature("rh#drow2",[1398.751],3)
+SetGlobal("rh#DrowExist","AR2202",1)
+Continue()
+END
+
+IF
+	Dead("rh#drow2")
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",4)
+		ActionOverride(Player1,JumpToPoint([1257.874]))
+		MoveViewPoint([1257.874],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		ActionOverride("rh#drow1",StartDialogueNoSet([PC]))
+		EndCutSceneMode()
+END
+
+IF
+	Dead("rh#drow2")
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",2)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",4)
+		ActionOverride(Player2,JumpToPoint([1257.874]))
+		MoveViewPoint([1257.874],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		ActionOverride("rh#drow1",StartDialogueNoSet([PC]))
+		EndCutSceneMode()
+END
+
+IF
+	Dead("rh#drow2")
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",3)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",4)
+		ActionOverride(Player3,JumpToPoint([1257.874]))
+		MoveViewPoint([1257.874],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		ActionOverride("rh#drow1",StartDialogueNoSet([PC]))
+		EndCutSceneMode()
+END
+
+IF
+	Dead("rh#drow2")
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",4)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",4)
+		ActionOverride(Player4,JumpToPoint([1257.874]))
+		MoveViewPoint([1257.874],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		ActionOverride("rh#drow1",StartDialogueNoSet([PC]))
+		EndCutSceneMode()
+END
+
+IF
+	Dead("rh#drow2")
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",5)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",4)
+		ActionOverride(Player5,JumpToPoint([1257.874]))
+		MoveViewPoint([1257.874],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		ActionOverride("rh#drow1",StartDialogueNoSet([PC]))
+		EndCutSceneMode()
+END
+
+IF
+	Dead("rh#drow2")
+	Global("rh#EvaTebrynIymril","GLOBAL",3)
+	Global("rh#PlayerDuelingTebryn","GLOBAL",6)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(1)
+		SetGlobal("DuelOn","AR2202",0)
+		SetGlobal("rh#EvaTebrynIymril","GLOBAL",4)
+		ActionOverride(Player6,JumpToPoint([1257.874]))
+		MoveViewPoint([1257.874],100)
+		Wait(1)
+		FadeFromColor([20.0],0)
+		ActionOverride("rh#drow1",StartDialogueNoSet([PC]))
+		EndCutSceneMode()
+END

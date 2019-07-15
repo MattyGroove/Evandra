@@ -1,0 +1,16 @@
+IF
+	InParty("rh#Adrian") 
+	InParty("rh#Eva")
+	See("rh#Eva")
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	!StateCheck("rh#Eva",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	RealGlobalTimerExpired("rh#AdrianEvandraTimer","GLOBAL")
+	Global("G#XB.AdrianEvandraBanter1","GLOBAL",1)
+	Global("G#XB.AdrianEvandraBanter2","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianEvandraBanter2","GLOBAL",1)
+	StartDialogueNoSet("rh#Eva")
+END

@@ -1,0 +1,340 @@
+// Initial goto
+
+IF
+    NumTimesTalkedTo(0)
+THEN
+  RESPONSE #100
+    Dialogue(Player1)
+END
+
+// ---------------------------------------------
+// Friendship Track
+// ---------------------------------------------
+
+IF  
+    InParty("rh#Eva")
+    See(Player1)
+    !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+    Global("rh#EvaFriendshipActive","GLOBAL",1)
+    !Global("rh#EvaRomanceActive","GLOBAL",2)
+    OR(7)
+      Global("rh#EvaTalksToB","GLOBAL",2) // talk 1
+      Global("rh#EvaTalksToB","GLOBAL",4) // talk 2
+      Global("rh#EvaTalksToB","GLOBAL",6) // talk 3
+      Global("rh#EvaTalksToB","GLOBAL",8) // talk 4
+      Global("rh#EvaTalksToB","GLOBAL",10) // talk 5
+      Global("rh#EvaTalksToB","GLOBAL",12) // talk 6
+      Global("rh#EvaTalksToB","GLOBAL",14) // talk 7
+THEN
+  RESPONSE #100
+  PlaySong(0)
+  PlaySound("rh#esong")
+  Dialogue(Player1)
+END
+
+IF
+  InParty("rh#Eva")
+  AreaCheck("AR5000")
+  Global("rh#EvaFriendshipActive","GLOBAL",1)
+  !Global("rh#EvaRomanceActive","GLOBAL",2)
+  Global("rh#EvaTalksTOB","GLOBAL",0)
+THEN
+RESPONSE #100
+  RealSetGlobalTimer("rh#EvaTalksTimer","GLOBAL",900)
+  SetGlobal("rh#EvaTalksTOB","GLOBAL",1)
+END
+
+// 1, 6
+
+IF  
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+  Global("rh#EvaFriendshipActive","GLOBAL",1)
+  OR(2)
+  Global("rh#EvaTalksTOB","GLOBAL",1) // talk 1
+  Global("rh#EvaTalksTOB","GLOBAL",11) // talk 6
+THEN
+  RESPONSE #100
+  IncrementGlobal("rh#EvaTalksTOB","GLOBAL",1)
+END
+
+// 2.
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  TimeOfDay(NIGHT)
+  AreaType(OUTDOOR)
+  RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+  Global("rh#EvaFriendshipActive","GLOBAL",1)
+  Global("rh#EvaTalksToB","GLOBAL",3)
+THEN
+RESPONSE #100
+  IncrementGlobal("rh#EvaTalksTOB","GLOBAL",1)
+END
+
+// 3.
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  Global("rh#EvaFriendshipActive","GLOBAL",1)
+  Global("rh#EvaTalksTOB","GLOBAL",5)
+  Global("SaradushSacked","GLOBAL",1)
+  Global("rh#EvaSaradush","GLOBAL",0)
+THEN
+  RESPONSE #100
+  IncrementGlobal("rh#EvaSaradush","GLOBAL",1)
+  RealSetGlobalTimer("rh#EvaTalksTimer","GLOBAL",2700)
+END
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+  Global("rh#EvaFriendshipActive","GLOBAL",1)
+  Global("rh#EvaTalksTOB","GLOBAL",5)
+  Global("SaradushSacked","GLOBAL",1)
+  Global("rh#EvaSaradush","GLOBAL",1)
+THEN
+RESPONSE #100
+  IncrementGlobal("rh#EvaTalksTOB","GLOBAL",1)
+END
+
+// 4.
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  AreaCheck("AR4500")
+  RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+  Global("rh#EvaFriendshipActive","GLOBAL",1)
+  Global("rh#EvaTalksToB","GLOBAL",7)
+THEN
+RESPONSE #100
+	IncrementGlobal("rh#EvaTalksTOB","GLOBAL",1)
+END
+
+// 5.
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  AreaCheck("AR5500")
+  RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+  Global("rh#EvaFriendshipActive","GLOBAL",1)
+  Global("rh#EvaTalksToB","GLOBAL",9)
+THEN
+  RESPONSE #100
+  IncrementGlobal("rh#EvaTalksTOB","GLOBAL",1)
+END
+
+// ---------------------------------------------
+// Romance Track
+// ---------------------------------------------
+
+IF  
+    InParty("rh#Eva")
+    See(Player1)
+    !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+    Global("rh#EvaRomanceActive","GLOBAL",2)
+    OR(8)
+      Global("rh#EvaLoveTalks","GLOBAL",2) // talk 1
+      Global("rh#EvaLoveTalks","GLOBAL",6) // talk 3
+      Global("rh#EvaLoveTalks","GLOBAL",8) // talk 4
+      Global("rh#EvaLoveTalks","GLOBAL",10) // talk 5
+      Global("rh#EvaLoveTalks","GLOBAL",12) // talk 6
+      Global("rh#EvaLoveTalks","GLOBAL",14) // talk 7
+      Global("rh#EvaWraith","GLOBAL",3)
+      Global("rh#EvaFinalTalk","GLOBAL",2)
+THEN
+  RESPONSE #100
+  PlaySong(0)
+  PlaySound("rh#esong")
+  Dialogue(Player1)
+END
+
+IF
+  InParty("rh#Eva")
+  AreaCheck("AR5000")
+  Global("rh#EvaRomanceActive","GLOBAL",2)
+  Global("rh#EvaLoveTalks","GLOBAL",0)
+THEN
+RESPONSE #100
+  RealSetGlobalTimer("rh#EvaTalksTimer","GLOBAL",900)
+  SetGlobal("rh#EvaLoveTalks","GLOBAL",1)
+END
+
+// 1, 7
+
+IF  
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+  Global("rh#EvaRomanceActive","GLOBAL",2)
+  OR(2)
+  Global("rh#EvaLoveTalks","GLOBAL",1) // talk 1
+  Global("rh#EvaLoveTalks","GLOBAL",13) // talk 7
+THEN
+  RESPONSE #100
+  IncrementGlobal("rh#EvaLoveTalks","GLOBAL",1)
+END
+
+// 3.
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  TimeOfDay(NIGHT)
+  AreaType(OUTDOOR)
+  RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+  Global("rh#EvaRomanceActive","GLOBAL",2)
+  Global("rh#EvaLoveTalks","GLOBAL",5)
+THEN
+RESPONSE #100
+  IncrementGlobal("rh#EvaLoveTalks","GLOBAL",1)
+END
+
+// Wraith
+
+IF  
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  Global("rh#EvaRomanceActive","GLOBAL",2)
+  Global("rh#EvaWraith","GLOBAL",2)
+THEN
+  RESPONSE #100
+  IncrementGlobal("rh#EvaWraith","GLOBAL",1)
+END
+
+// 4. Saradush
+
+IF  
+  InParty("rh#Eva")
+  See(Player1)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("rh#EvaRomanceActive","GLOBAL",2)
+    Global("rh#EvaLoveTalks","GLOBAL",7)
+    Global("SaradushSacked","GLOBAL",1)
+    PartyRested()
+THEN
+  RESPONSE #100
+  IncrementGlobal("rh#EvaLoveTalks","GLOBAL",1)
+END
+
+// 5.
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  AreaCheck("AR4500")
+  RealGlobalTimerExpired("rh#EvaTalksTimer","GLOBAL")
+  Global("rh#EvaRomanceActive","GLOBAL",2)
+  Global("rh#EvaLoveTalks","GLOBAL",9)
+THEN
+RESPONSE #100
+  IncrementGlobal("rh#EvaLoveTalks","GLOBAL",1)
+END
+
+// 6.
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  AreaCheck("AR5500")
+  Global("rh#EvaRomanceActive","GLOBAL",2)
+  Global("rh#EvaLoveTalks","GLOBAL",11)
+THEN
+  RESPONSE #100
+  IncrementGlobal("rh#EvaLoveTalks","GLOBAL",1)
+END
+
+// final talk
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  Global("rh#EvaRomanceActive","GLOBAL",2)
+  Global("ChallengesDone","GLOBAL",1)
+  Global("rh#EvaFinalTalk","GLOBAL",0)
+THEN
+RESPONSE #100
+  SetGlobal("rh#EvaFinalTalk","GLOBAL",1)
+  RealSetGlobalTimer("rh#EvaFinalTalkTimer","GLOBAL",30)
+END
+
+IF
+  InParty("rh#Eva")
+  See(Player1)
+  !StateCheck("rh#Eva",CD_STATE_NOTVALID)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+  Global("rh#EvaRomanceActive","GLOBAL",2)
+  Global("ChallengesDone","GLOBAL",1)
+  Global("rh#EvaFinalTalk","GLOBAL",1)
+  RealGlobalTimerExpired("rh#EvaFinalTalkTimer","GLOBAL")
+THEN
+RESPONSE #100
+  SetGlobal("rh#EvaFinalTalk","GLOBAL",2)
+END

@@ -1,0 +1,10 @@
+// Appended to Bodhi's lair to spawn Vamp!Evandra
+
+IF
+  Global("rh#EvaVampire","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("rh#EvaVampire","GLOBAL",2)
+    CreateCreature("rh#evamp",[1473.332],2)
+    Continue()
+END

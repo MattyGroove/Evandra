@@ -1,0 +1,49 @@
+@0    = ~You follow in the hopes of retrieving something dear to you. I say that the longer you keep this up, the more you will lose.~
+@1    = ~Consider your dear friend Evandra. How unfortunate that elves are so slow to decide what they truly want.~
+@2    = ~Your insinuations don't interest me, witch.~
+@3    = ~Oh, but perhaps they should. Follow me further, <CHARNAME>, and you will lose more than you can imagine! Starting now!~
+@4    = ~The Final Battle with Bodhi.
+
+Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one person that is dearest to my heart: Evandra. Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible. I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+@5    = ~A friend is afflicted by vampirism.  An old book suggested that followers of Oghma might know something about that.~
+@6    = ~I lost a loved one in a battle with his sister, Bodhi.  I seek a means of curing her.~
+@7    = ~Have you come seeking wisdom from the Binder of What is Known? The Wise God stands ready.~
+@8    = ~No, thank you, I have no need of help at the moment.~
+@9    = ~Elhan! I've the half vampire body of Evandra here because of you! You'll tell me now!~
+@10   = ~A loved one was taken by a vampire. What can I expect when I find her?~
+@11   = ~Someone I care about has fallen to a vampire. Is there any way to save her?~
+@12   = ~But... no, I have already prepared much for this meeting, <CHARNAME>. I did warn you that you would suffer great loss if you continued your push towards me.  I did not lie.~
+@13   = ~You have taken too much already!  You will return both Imoen's soul and Evandra!~
+@14   = ~And you have delivered on that promise. Return Evandra and perhaps I will be merciful.~
+@15   = ~I would have hunted you for your theft of Evandra alone. She is very important to me.~
+@16   = ~You place too much confidence in sentiment.  The theft of Evandra will not save you.~
+@17   = ~Ah, yes... the lovely Evandra. She reminded me of myself, once upon a time, and I have made the likeness even stronger now. I doubt your fumbling could have inspired the loyalty I have taken with a bite and a gaze.~
+@18   = ~The Final Battle with Bodhi.
+
+Bodhi has turned Evandra into a vampire!  Or... or very nearly.  The process may not have been completed in the short time Bodhi has had her. I will have lost her if something cannot be done.  Perhaps the elven war sage might know some way of restoration ... or Elhan...~
+@19   = ~An interesting ploy, though I am sure her fate will still serve as an example, whether you wish her back or not.~
+@20   = ~She reminded me of myself, once upon a time, and I have made the likeness even stronger now. I doubt your fumbling could have inspired the loyalty I have taken with a bite and a gaze.~
+@21   = ~Do you see that, <CHARNAME>? She is not yet fully turned, and yet she is already mine to use against you. Perhaps your connection was as illusory as everything else about her.~
+@22   = ~I am... yours to command, mistress.~
+@23   = ~<CHARNAME>? By Lunitari, never in my life have I had such strange dreams...~ [rh#ev120]
+@24   = ~The Final Battle with Bodhi.
+
+While I had feared for some time that Bodhi's final revenge on me would be to take away Evandra forever, it seems that the information in the lorebook was right... Amaunator's idol has restored Evandra not only to life, but has removed the vampiric curse from her, as well.~
+@25   = ~Though... perhaps I'm still dreaming. This is as much a crypt as that vampire's lair, and... <CHARNAME>? What is going on?~
+@26   = ~Snap out of it, Evandra. This is real.~
+@27   = ~It was no dream. Bodhi turned you into a vampire.~
+@28   = ~Come on, let's go. We still have an archmage to kill.~
+@29   = ~I... oh. Listen to me babbling like a disoriented fool. I'm still not quite myself yet, but... I should thank you.~
+@30   = ~Freeing me from that... curse... could not have been easy. What ancient magic have you dug up to make such a thing possible at all?~
+@31   = ~Divine magic. We're in the temple of a long-lost sun god.~
+@32   = ~Don't sound surprised. You're not the only wizard here.~
+@33   = ~I have my ways. You don't need to be a wizard to be resourceful.~
+@34   = ~It's a long story, and one I'd rather share once we're outside.~
+@35   = ~I... see. It would need to be a sun god to dispell such darkness, I suppose.~
+@36   = ~I know, but... oh, never mind. However you managed it, thank you.~
+@37   = ~Truth be told, I would rather leave as soon as possible myself. Shall we be away from here?~
+@38   = ~I'm ready when you are, Evandra. Let's get out of here.~
+@39   = ~I actually don't have room for you right now. I'm sorry.~
+@40   = ~Shall we be away from here? I think I'd rather not tarry any longer.~
+@41   = ~I'd like nothing better, my friend.~
+@42   = ~Truly? That was awfully short-sighted of you, but never mind. I can find my own way out.~

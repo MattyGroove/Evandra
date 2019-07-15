@@ -1,0 +1,81 @@
+// 1. Friendship
+
+IF
+	Global("StartEndBios","AR6200",1)
+	InParty("rh#Eva")
+	Global("rh#EvaBio","GLOBAL",0)
+	!Global("rh#EvaRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	SetGlobal("rh#EvaBio","GLOBAL",1)
+	TextScreen("rh#eva1")
+	SmallWait(1)
+	Continue()
+END
+
+// 2. Romance, no marriage
+
+IF
+	Global("StartEndBios","AR6200",1)
+	InParty("rh#Eva")
+	Global("rh#EvaBio","GLOBAL",0)
+	Global("rh#EvaRomanceActive","GLOBAL",2)
+	Global("PlayerChoseEssence","GLOBAL",0)
+	Global("rh#EvaMarriage","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("rh#EvaBio","GLOBAL",1)
+	TextScreen("rh#eva2")
+	SmallWait(1)
+	Continue()
+END
+
+// 3. Romance, marriage in Suldanessellar
+
+IF
+	Global("StartEndBios","AR6200",1)
+	InParty("rh#Eva")
+	Global("rh#EvaBio","GLOBAL",0)
+	Global("rh#EvaRomanceActive","GLOBAL",2)
+	Global("PlayerChoseEssence","GLOBAL",0)
+	Global("rh#EvaMarriage","GLOBAL",1)
+THEN
+RESPONSE #100
+	SetGlobal("rh#EvaBio","GLOBAL",1)
+	TextScreen("rh#eva3")
+	SmallWait(1)
+	Continue()
+END
+
+// 4. Romance, marriage in Amn
+
+IF
+	Global("StartEndBios","AR6200",1)
+	InParty("rh#Eva")
+	Global("rh#EvaBio","GLOBAL",0)
+	Global("rh#EvaRomanceActive","GLOBAL",2)
+	Global("PlayerChoseEssence","GLOBAL",0)
+	Global("rh#EvaMarriage","GLOBAL",2)
+THEN
+RESPONSE #100
+	SetGlobal("rh#EvaBio","GLOBAL",1)
+	TextScreen("rh#eva4")
+	SmallWait(1)
+	Continue()
+END
+
+// 5. Romance, PC ascends
+
+IF
+	Global("StartEndBios","AR6200",1)
+	InParty("rh#Eva")
+	Global("rh#EvaBio","GLOBAL",0)
+	Global("rh#EvaRomanceActive","GLOBAL",2)
+	Global("PlayerChoseEssence","GLOBAL",1)
+THEN
+RESPONSE #100
+	SetGlobal("rh#EvaBio","GLOBAL",1)
+	TextScreen("rh#eva5")
+	SmallWait(1)
+	Continue()
+END
